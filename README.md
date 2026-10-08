@@ -1,33 +1,16 @@
-# Binary, Hexadecimal, and Decimal Converter
+# Number converter
 
-Menu-driven conversion between 16-bit binary, 32-bit hexadecimal, and unsigned decimal values.
+I wrote this program to convert numbers between binary, hexadecimal, and decimal without using built in conversion functions.
 
-An educational C++ example developed from coursework, organized as a standalone project.
+It has a menu where you choose the conversion and enter a number. The binary option takes exactly 16 bits. The hexadecimal option accepts up to 8 digits, and decimal input can go up to 4294967295. Choose 4 to exit.
 
-## Build and run
+For a quick example, enter 0000000000001010 in the binary option. It should give you 0x000A and the decimal value 10.
 
-Requires a C++17 compiler and Make. Smoke checks also require Python 3.
+To build and run it, you need a C++17 compiler and Make. Open a terminal in this folder and run:
 
 ```sh
 make
 make run
-make check
 ```
 
-To choose a compiler: `make CXX=clang++` or `make CXX=g++`. Run `make clean` to remove build outputs.
-
-## Example
-
-Choose an operation from the menu, enter a value, then select option 4 to exit.
-
-## Structure
-
-- `src/`: source code and headers.
-- `tests/smoke.py`: representative console checks with execution timeouts.
-- `Makefile`: builds the source files together into `build/example`.
-
-## Scope
-
-Binary input must contain exactly 16 bits. Decimal values must fit in an unsigned 32-bit integer.
-
-The source retains the original exercise logic and explanatory comments. Build outputs, submission documents, and course materials are not part of this repository.
+You can also run `make check` to check the sample output. That needs Python 3. Use `make clean` if you want to remove the compiled program.
